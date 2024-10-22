@@ -1,0 +1,64 @@
+---
+
+---
+
+<form id="contact" name="contact" method="GET">
+    <input type="hidden" name="form-name" value="contact" />
+    <label for="contact-fname">First Name</label>
+    <input id="contact-fname" type="text" name="fname" placeholder="Your first name" />
+    <label for="contact-lname">Last Name</label>
+    <input id="contact-lname" type="text" placeholder="Your last name" />
+    <div>
+        <label for="contact-email">*Email</label>
+        <input id="contact-email" type="email" name="email" inputmode="email" placeholder="Your preferred contact email" required />
+    </div>
+    <div>
+        <label for="contact-message">*Message</label>
+        <textarea id="contact-message" name="message" rows="4" placeholder="Tell me about your project" required></textarea>
+    </div>
+    <button type="submit">Send Message</button>
+</form>
+
+<script>
+    const form = document.getElementById("contact");
+    var xhr = new XMLHttpRequest();
+    const handleFormSubmission = (event) => {
+        // prevent page from reloading
+        event.preventDefault();
+
+        const data = event.target.elements;
+
+        // put into JSON object
+        const formData = {
+            fname: data.fname.value,
+            lname: data.lname.value,
+            email: data.email.value,
+            message: data.message.value,
+        };
+
+        // Set POST request method to our netlify function
+        xhr.open("POST", ".netlify/functions/contact");
+
+        // Set the request headers
+        xhr.setRequestHeader("Content-Type", "application/json; charset=UTF-8");
+
+        // Send the data as JSON to our netlify function
+        xhr.send(JSON.stringify(formData));
+
+        // handle the response
+        xhr.onload = function () {
+            const response = JSON.parse(xhr.responseText);
+
+            if (xhr.status === 200) {
+                // The request was successful
+                console.log("success");
+            } else {
+                // THe request failed
+                console.log("fail");
+            }
+        };
+    };
+
+    // add the submission event listener
+    form.addEventListener("submit", handleFormSubmission, true);
+</script>

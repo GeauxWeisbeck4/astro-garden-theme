@@ -16,6 +16,8 @@ const { title, description } = Astro.props;
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
+		<meta property="og:url" content="https://astro-garden-theme.netlify.app">
+		<meta property="og:type" content="website">
 		<SEO
 			title={title}
 			description={description}
@@ -23,11 +25,11 @@ const { title, description } = Astro.props;
 				basic: {
 					title: `${title} | ${description}.`,
 					type: "og:image",
-					image: "https://user-images.githubusercontent.com/5182256/131216951-8f74f425-f775-463d-a11b-0e01ad9fce8d.png",
+					image: "https://asset.cloudinary.com/tar-heel-dev-studio/23044f064728dd9ed93bc07ccbd206f0",
 				}
 			}}
 			twitter={{
-				creator: "@jonasmerlins1"
+				creator: "@geauxweisbeck4"
 			}}
 			extend={{
 				// extending the default link tags
@@ -36,10 +38,10 @@ const { title, description } = Astro.props;
         meta: [
 					{
 						name: "twitter:image",
-						content: "https://user-images.githubusercontent.com/5182256/131216951-8f74f425-f775-463d-a11b-0e01ad9fce8d.png",
+						content: "https://asset.cloudinary.com/tar-heel-dev-studio/23044f064728dd9ed93bc07ccbd206f0",
 					},
 					{ name: "twitter:title", content: "Astro Theme Garden" },
-					{ name: "twitter:description", content: "Astro Starter Theme for building digital gardens." },
+					{ name: "twitter:description", content: "Astro Starter Theme that makes building digital gardens a breeze." },
 				],
 			}}
 		/>
@@ -49,31 +51,3 @@ const { title, description } = Astro.props;
 		<slot />
 	</body>
 </html>
-<style is:global>
-	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
-			white 60%
-		);
-	}
-	html {
-		font-family: system-ui, sans-serif;
-		background: #13151a;
-	}
-	code {
-		font-family:
-			Menlo,
-			Monaco,
-			Lucida Console,
-			Liberation Mono,
-			DejaVu Sans Mono,
-			Bitstream Vera Sans Mono,
-			Courier New,
-			monospace;
-	}
-</style>
