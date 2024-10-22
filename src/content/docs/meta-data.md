@@ -1,6 +1,8 @@
 ---
 title: Meta Data
 description: All information about the site's meta data.
+order: 2
+tags: ["SEO", "Docs"]
 ---
 
 # Meta Data
