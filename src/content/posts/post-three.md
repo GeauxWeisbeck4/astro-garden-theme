@@ -1,15 +1,14 @@
 ---
-layout: ../../layouts/BlogPostLayout.astro
-title: 'Post One'
+title: 'Post Three'
 pubDate: 2024-10-23
-description: 'This is post number one for this digital garden theme'
+description: 'This is post number three for this digital garden theme'
 image: 
     url: 'https://docs.astro.build/assets/rose.webp'
     alt: 'The astro logo'
-tags: ["astro", "blog", "digital garden", "one"]
+tags: ["astro", "blog", "digital garden", "three"]
 ---
 
-# Post One
+# Post Three
 
 Published on: 2024-10-23
 

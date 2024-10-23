@@ -3,11 +3,39 @@
 ---
 
 <nav class="flex justify-center w-full">
-    <a class="font-bold hover:text-orange-500 hover:underline hover:underline-offset-2" href="/stories">Stories</a><span class="px-4">|</span>
-    <a class="font-bold hover:text-orange-500 hover:underline hover:underline-offset-2" href="/tags">Tags</a><span class="px-4">|</span>
-    <a class="font-bold hover:text-orange-500 hover:underline hover:underline-offset-2" href="/sprints">Sprints</a><span class="px-4">|</span>
-    <a class="font-bold hover:text-orange-500 hover:underline hover:underline-offset-2" href="/posts">Posts</a><span class="px-4">|</span>
-    <a class="font-bold hover:text-orange-500 hover:underline hover:underline-offset-2" href="/wiki">Wiki</a><span class="px-4">|</span>
-    <a class="font-bold hover:text-orange-500 hover:underline hover:underline-offset-2" href="/rss">RSS</a><span class="px-4">|</span>
-    <a class="font-bold hover:text-orange-500 hover:underline hover:underline-offset-2" href="/donate">Donate</a><span class="px-4">|</span>
+    <div class="nav-links">
+        <a class="font-bold hover:text-orange-500 hover:underline hover:underline-offset-2" href="/stories">Stories</a><span class="px-4">|</span>
+        <a class="font-bold hover:text-orange-500 hover:underline hover:underline-offset-2" href="/tags">Tags</a><span class="px-4">|</span>
+        <a class="font-bold hover:text-orange-500 hover:underline hover:underline-offset-2" href="/sprints">Sprints</a><span class="px-4">|</span>
+        <a class="font-bold hover:text-orange-500 hover:underline hover:underline-offset-2" href="/posts">Posts</a><span class="px-4">|</span>
+        <a class="font-bold hover:text-orange-500 hover:underline hover:underline-offset-2" href="/wiki">Wiki</a><span class="px-4">|</span>
+        <a class="font-bold hover:text-orange-500 hover:underline hover:underline-offset-2" href="/rss">RSS</a><span class="px-4">|</span>
+        <a class="font-bold hover:text-orange-500 hover:underline hover:underline-offset-2" href="/donate">Donate</a><span class="px-4">|</span>
+    </div>
 </nav>
+<style>
+    .nav-links {
+        width: 100%;
+        top: 5rem;
+        left: 48px;
+        background-color: #ff9776;
+        display: none;
+        margin: 0;
+    }
+    .expanded {
+        display: unset;
+    }
+    @media screen and (min-width: 636px) {
+        .nav-links {
+            margin-left: 5em;
+            display: block;
+            position: static;
+            width: auto;
+            background: none;
+        }
+        .nav-links a {
+            display: inline-block;
+            padding: 15px 20px;
+        }
+    }
+</style>

@@ -2,7 +2,7 @@
 title: Algorithms
 description: Notes about popular algorithms.
 order: 1
-tags: ["Algorithms", "DSA", "Computer Science"]
+tags: ["Algorithms", "DSA", "Computer Science", "notes"]
 ---
 
 ## Algorithms
